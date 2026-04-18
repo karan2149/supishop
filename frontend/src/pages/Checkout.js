@@ -88,7 +88,7 @@ const Checkout = () => {
         amount: razorpayOrder.amount,
         currency: razorpayOrder.currency,
         order_id: razorpayOrder.razorpay_order_id,
-        name: 'KPshop',
+        name: 'KPCollection',
         description: 'Order Payment',
         handler: async (response) => {
           try {

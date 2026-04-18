@@ -44,7 +44,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-4">
             <div className="col-span-1 md:col-span-4 lg:col-span-8 bg-white bg-opacity-95 p-12 rounded-lg">
               <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tighter font-extrabold text-[#111827] mb-4" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Welcome to KPshop
+                Welcome to KPCollection
               </h1>
               <p className="text-lg text-[#4B5563] mb-8 leading-relaxed" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>
                 Discover the latest electronics, fashion, and lifestyle products at unbeatable prices
