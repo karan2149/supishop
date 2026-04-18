@@ -49,7 +49,7 @@ const Login = () => {
       <div className="max-w-md w-full bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-extrabold mb-4" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '-0.02em' }}>
-            <span className="text-[#0052FF]">Supi</span><span className="text-[#111827]">shop</span>
+            <span className="text-[#0052FF]">KP</span><span className="text-[#111827]">shop</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-bold text-[#111827]" style={{ fontFamily: 'Manrope, sans-serif' }}>
             {isLogin ? 'Welcome Back' : 'Create Account'}

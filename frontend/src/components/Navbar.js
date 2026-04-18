@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center" data-testid="logo-link">
             <span className="text-2xl font-extrabold text-[#0052FF]" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '-0.02em' }}>
-              Supi<span className="text-[#111827]">shop</span>
+              KP<span className="text-[#111827]">shop</span>
             </span>
           </Link>
 

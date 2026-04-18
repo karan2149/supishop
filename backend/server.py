@@ -42,7 +42,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 # Create the main app
-app = FastAPI(title="Supishop API")
+app = FastAPI(title="KPshop API")
 api_router = APIRouter(prefix="/api")
 
 # ==================== Models ====================
