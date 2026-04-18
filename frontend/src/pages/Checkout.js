@@ -7,7 +7,7 @@ import { useRazorpay } from 'react-razorpay';
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Checkout = () => {
-  const [Razorpay] = useRazorpay();
+  const { Razorpay } = useRazorpay();
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(false);
