@@ -1,0 +1,123 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "emotional_tone": "Trustworthy, Modern, Frictionless, Expansive",
+  "typography": {
+    "heading_font": "Manrope",
+    "body_font": "IBM Plex Sans",
+    "scale": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl tracking-tighter font-extrabold",
+      "h2": "text-2xl md:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl md:text-2xl tracking-tight font-semibold",
+      "h4": "text-lg md:text-xl font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-gray-500",
+      "overline": "text-xs uppercase tracking-[0.2em] font-bold"
+    },
+    "instruction": "Avoid Inter/Roboto for headings. Use Manrope for sharp, modern authoritative headers. Maintain tight tracking on large text."
+  },
+  "color_palette": {
+    "primary": {
+      "default": "#0052FF",
+      "hover": "#0040CC",
+      "foreground": "#FFFFFF"
+    },
+    "background": {
+      "default": "#F8F9FA",
+      "surface": "#FFFFFF",
+      "surface_hover": "#F3F4F6",
+      "overlay": "rgba(0, 0, 0, 0.4)"
+    },
+    "text": {
+      "primary": "#111827",
+      "secondary": "#4B5563",
+      "muted": "#9CA3AF",
+      "inverse": "#FFFFFF"
+    },
+    "accent": {
+      "warning": "#FACC15",
+      "danger": "#EF4444",
+      "success": "#10B981"
+    },
+    "border": {
+      "default": "#E5E7EB",
+      "focus": "#0052FF"
+    }
+  },
+  "spacing_and_layout": {
+    "grid_system": "Use strict bento grid for marketing/hero sections (grid-cols-1 md:grid-cols-4 lg:grid-cols-12). Use classic multi-column grid (grid-cols-2 md:grid-cols-3 lg:grid-cols-4) for product listings.",
+    "spacing_scale": "Generous spacing. Use p-6, p-8, p-12 for sections. Items inside cards should have p-4 or p-6.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "borders_and_radius": "Subtle border-radius (rounded-md to rounded-lg max). Hard 1px borders (border-gray-200) for structural clarity.",
+    "shadows": "Ambient diffuse shadows for cards (shadow-sm). On hover, transition to shadow-md and translate-y-[-2px]."
+  },
+  "components": {
+    "navigation": "Sticky white header (z-50) with subtle bottom border. Include Logo, robust Search bar in center, Account, Wishlist, and Cart icons. Must not hide desktop links behind a hamburger menu.",
+    "hero_section": "Bento-style layout instead of a generic carousel. 1 massive feature block (spanning multiple rows/columns) with the premium tech background, and 2 smaller side promo blocks.",
+    "product_card": "Surface white, 1px gray border. Image takes top 60%. Bottom 40% holds title (truncate 2 lines), price, rating, and Add to Cart button. Hover: Image slight zoom, card lift.",
+    "buttons": "Primary buttons: bg-[#0052FF] text-white hover:bg-[#0040CC] rounded-md font-semibold transition-all. Secondary: border border-gray-300 bg-white hover:bg-gray-50 text-gray-700.",
+    "product_page": "One Long Page layout. Left column: Sticky Image Gallery (large main image, thumbnails below). Right column: Product info, title, price, variants, persistent 'Add to Cart' button, accordion for details/reviews.",
+    "forms_inputs": "Shadcn UI inputs. 1px solid border, focus ring with primary color. Labels must be visible.",
+    "admin_dashboard": "High-density layout. Strict grid hierarchy. Minimal animations. Cardless or 1px bordered widgets for data clarity."
+  },
+  "motion_and_interactions": {
+    "hover_states": "All interactive elements must change state (opacity, background color, or transform).",
+    "transitions": "Use transition-all duration-200 ease-in-out for buttons and cards.",
+    "loading": "Skeleton loaders for product grids. Minimalist spinners for buttons."
+  },
+  "media_and_assets": {
+    "icons": "Use @phosphor-icons/react for modern, slightly duotone or regular weight icons that look premium.",
+    "images": {
+      "logo": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c659ff4-129a-4b7d-b40f-0e8b9c0c2225/images/e2b24ee87f0a758a4bcbba06f7479bcb20ce378c751bbbaad3ec1cbd238f927e.png",
+        "description": "F-commerce 3D logo"
+      },
+      "hero_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c659ff4-129a-4b7d-b40f-0e8b9c0c2225/images/2fc9b376d5a556391f775aaee5838604074afbab3f3c046009000c76b7b8ae78.png",
+        "description": "Premium e-commerce geometric pedestal background for hero section"
+      },
+      "empty_state_cart": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c659ff4-129a-4b7d-b40f-0e8b9c0c2225/images/594054c6a675e4c979b433bdc39ab08f81b4fc1dafd520de6678700ccf0b89b0.png",
+        "description": "3D playful empty shopping cart/bag illustration"
+      },
+      "products": [
+        {
+          "url": "https://images.unsplash.com/photo-1767978139637-fe09cbcd13fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxsYXRlc3QlMjBzbWFydHBob25lJTIwaXNvbGF0ZWR8ZW58MHx8fHwxNzc2NTAzOTM0fDA&ixlib=rb-4.1.0&q=85",
+          "description": "Smartphone"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1759297044036-19a0256fade2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsYXB0b3AlMjBmbGF0JTIwbGF5fGVufDB8fHx8MTc3NjUwMzkzNHww&ixlib=rb-4.1.0&q=85",
+          "description": "Modern Laptop"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1722891067479-5fd39edbfc3d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwaGVhZHBob25lcyUyMGlzb2xhdGVkfGVufDB8fHx8MTc3NjUwMzkzNHww&ixlib=rb-4.1.0&q=85",
+          "description": "Premium Headphones"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1610664676282-55c8de64f746?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxuaWtlJTIwcnVubmluZyUyMHNob2VzJTIwaXNvbGF0ZWR8ZW58MHx8fHwxNzc2NTAzOTM0fDA&ixlib=rb-4.1.0&q=85",
+          "description": "Nike Running Shoes"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1750055129957-6e757ce881dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxwcmVtaXVtJTIwdGVjaCUyMGdhZGdldHMlMjBpc29sYXRlZHxlbnwwfHx8fDE3NzY1MDM5MTh8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Electronics Collection"
+        }
+      ]
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure text over images has dark overlays. Follow APCA contrast rules.",
+    "testing_attributes": "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='add-to-cart-button')."
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the Light Theme and Swiss & High-Contrast archetype.",
+    "Implement navigation without hiding desktop links behind a hamburger menu.",
+    "Use Manrope for headings and IBM Plex Sans for body text.",
+    "Do not use transparent headers over hero images; ensure the nav has a white or frosted glass background.",
+    "For the hero layout, implement a bento grid structure using the provided 'hero_background' image.",
+    "Map the product images provided in 'media_and_assets' into the product catalog and detail pages.",
+    "Ensure all buttons and inputs use the color hexes defined under 'color_palette'.",
+    "Install and use @phosphor-icons/react for icons.",
+    "Use the exact image URLs provided; do not use placeholders like via.placeholder.com.",
+    "Add 'data-testid' to all critical UI components for testing."
+  ]
+}
