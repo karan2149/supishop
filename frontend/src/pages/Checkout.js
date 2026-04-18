@@ -76,6 +76,13 @@ const Checkout = () => {
         { withCredentials: true }
       );
 
+      // DEMO MODE: skip Razorpay and go directly to orders page
+      if (razorpayOrder.demo_mode) {
+        toast.success('Demo Payment Successful! Order placed.');
+        navigate('/orders');
+        return;
+      }
+
       const options = {
         key: razorpayOrder.key_id,
         amount: razorpayOrder.amount,

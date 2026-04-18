@@ -919,6 +919,34 @@ async def create_order(order_data: OrderCreate, request: Request, background_tas
 async def create_razorpay_order(order_data: RazorpayOrderCreate, request: Request):
     await get_current_user(request)
     
+    # DEMO MODE: If Razorpay keys are placeholder, simulate payment success
+    razorpay_key = os.environ.get('RAZORPAY_KEY_ID', '')
+    if not razorpay_key or razorpay_key.startswith('rzp_test_xxx') or razorpay_key == 'your_razorpay_secret_key':
+        logger.info("Using DEMO payment mode - auto-marking order as paid")
+        
+        # Auto-mark order as paid
+        await db.orders.update_one(
+            {"_id": ObjectId(order_data.order_id)},
+            {"$set": {"status": "paid", "payment_id": f"demo_pay_{secrets.token_hex(8)}"}}
+        )
+        
+        # Reduce stock
+        order = await db.orders.find_one({"_id": ObjectId(order_data.order_id)})
+        if order:
+            for item in order["items"]:
+                await db.products.update_one(
+                    {"_id": ObjectId(item["product_id"])},
+                    {"$inc": {"stock": -item["quantity"]}}
+                )
+        
+        return {
+            "demo_mode": True,
+            "razorpay_order_id": f"demo_order_{secrets.token_hex(8)}",
+            "amount": int(order_data.amount * 100),
+            "currency": "INR",
+            "key_id": "demo"
+        }
+    
     try:
         razorpay_order = razorpay_client.order.create({
             "amount": int(order_data.amount * 100),  # Convert to paise
@@ -938,7 +966,7 @@ async def create_razorpay_order(order_data: RazorpayOrderCreate, request: Reques
             "razorpay_order_id": razorpay_order["id"],
             "amount": razorpay_order["amount"],
             "currency": razorpay_order["currency"],
-            "key_id": os.environ.get('RAZORPAY_KEY_ID', '')
+            "key_id": razorpay_key
         }
     except Exception as e:
         logger.error(f"Razorpay order creation failed: {str(e)}")
