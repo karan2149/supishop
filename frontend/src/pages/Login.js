@@ -48,11 +48,9 @@ const Login = () => {
     <div className="min-h-screen bg-[#F8F9FA] flex items-center justify-center px-4" data-testid="auth-page">
       <div className="max-w-md w-full bg-white rounded-lg shadow-sm border border-gray-200 p-8">
         <div className="text-center mb-8">
-          <img
-            src="https://static.prod-images.emergentagent.com/jobs/7c659ff4-129a-4b7d-b40f-0e8b9c0c2225/images/e2b24ee87f0a758a4bcbba06f7479bcb20ce378c751bbbaad3ec1cbd238f927e.png"
-            alt="F-Commerce"
-            className="h-12 mx-auto mb-4"
-          />
+          <h1 className="text-3xl font-extrabold mb-4" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '-0.02em' }}>
+            <span className="text-[#0052FF]">Supi</span><span className="text-[#111827]">shop</span>
+          </h1>
           <h2 className="text-2xl md:text-3xl font-bold text-[#111827]" style={{ fontFamily: 'Manrope, sans-serif' }}>
             {isLogin ? 'Welcome Back' : 'Create Account'}
           </h2>

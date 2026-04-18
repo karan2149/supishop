@@ -45,11 +45,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center" data-testid="logo-link">
-            <img
-              src="https://static.prod-images.emergentagent.com/jobs/7c659ff4-129a-4b7d-b40f-0e8b9c0c2225/images/e2b24ee87f0a758a4bcbba06f7479bcb20ce378c751bbbaad3ec1cbd238f927e.png"
-              alt="F-Commerce"
-              className="h-10"
-            />
+            <span className="text-2xl font-extrabold text-[#0052FF]" style={{ fontFamily: 'Manrope, sans-serif', letterSpacing: '-0.02em' }}>
+              Supi<span className="text-[#111827]">shop</span>
+            </span>
           </Link>
 
           <form onSubmit={handleSearch} className="flex-1 max-w-2xl mx-8" data-testid="search-form">
